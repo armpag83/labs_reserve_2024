@@ -1,6 +1,6 @@
 <?php
 	// settaggio dell'header http per il formato corretto
-	//header("Content-Type: application/json");
+	header("Content-Type: application/json");
 	include 'class_docente.php';
 
 	/* TODO: recuperare i parametri dal database con la query corretta */

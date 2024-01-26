@@ -38,11 +38,15 @@ class Docente {
         $this->cognome = $cognome;
     }
 	
-	// Metodo per la serializzazione in JSON
-    public function toJSON() {
-		return json_encode($this->toArray());
+	// Metodo per la serializzazione in XML
+    public function toXML() {
+        $xml = new SimpleXMLElement('<docente></docente>');
+        $xml->addChild('codice_docente', $this->codice);
+        $xml->addChild('nome', $this->nome);
+        $xml->addChild('cognome', $this->cognome);
+        return $xml->asXML();
     }
-
+	
     public function toArray() {
 		$temp = array(
 			'codice_docente' => $this->codice,
@@ -50,6 +54,11 @@ class Docente {
 			'cognome' => $this->cognome
 		);
 		return $temp;
+    }
+
+	// Metodo per la serializzazione in JSON
+    public function toJSON() {
+		return json_encode($this->toArray());
     }
 
 }
