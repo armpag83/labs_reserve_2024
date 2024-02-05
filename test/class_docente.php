@@ -60,7 +60,15 @@ class Docente {
     public function toJSON() {
 		return json_encode($this->toArray());
     }
-
+	
+	// Metodo per la deserializzazione
+	public function jsonToObject($json_string){
+		$sj = json_decode($json_string, true);
+		$this->codice = $sj['codice_docente'];
+		$this->nome = $sj['nome'];
+		$this->cognome = $sj['cognome'];
+	}
+	
 }
 
 ?>
