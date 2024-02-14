@@ -68,7 +68,7 @@ class DocentePDO extends PDO {
 }
 
 // Esempio di utilizzo
-$docente = new Docente();
+$docente = new DocentePDO();
 
 // Recupera il docente con il codice specificato
 if ($docente->get_by_codice("AA001")) {
