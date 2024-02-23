@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gestione Laboratoriale</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CARICAMENTO DELLE CLASSI BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- CARICAMENTO DEL FOGLIO DI STILE -->
+    <link rel="stylesheet" href="../stili/homeStyle.css">
+
+    <script>
+        let mesi = [];
+        mesi.push('Gennaio');
+        mesi.push('Febbraio');
+        mesi.push('Marzo');
+
+
+
+        function Days(days) {
+            var result = new Date();
+
+            var data = new Date();
+
+            var day = result.getDay();
+            data.setDate((result.getDate() - day + (day == 0 ? -6 : 1)) + days);
+
+            var anno = data.getFullYear();
+            var mese = mesi[data.getMonth()];
+            var giorno = data.getDate();
+            var data_str = giorno + " " + mese + " " + anno;
+
+            return data_str;
+
+
+            return data;
+
+            /*
+            var anno = result.getFullYear();
+            var mese = mesi[result.getMonth()];
+            var giorno = result.getDay() + days;
+            var data_str = giorno + " " + mese + " " + anno;
+            return data_str;*/
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR BOOTSTRAP + CONTAINER NAVBAR -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Cerca</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../gestione_laboratorio_login/index.php"><span
+                                class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGINA PRINCIPALE CON MESSAGGIO DI BENVENUTO -->
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+            </div>
+            <div class="col-sm-8 text-left">
+                <h1>Benvenuto ### !</h1>
+                <p>Qui potrai scegliere il laboratorio che preferisci e prenotare per l'orario desiderato nelle
+                    settimane disponibili.</p>
+                <hr>
+
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option disabled selected value="hide">LAB01</option>
+                    <option value="1">
+                        <script>document.write(Days(0) + " - " + Days(5))</script>
+                    </option>
+                    <option value="2">
+                        <script>document.write(Days(7) + " - " + Days(12))</script>
+                    </option>
+                    <option value="3">
+                        <script>document.write(Days(14) + " - " + Days(19))</script>
+                    </option>
+                    <option value="4">
+                        <script>document.write(Days(21) + " - " + Days(26))</script>
+                    </option>
+                </select>
+                <br>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option disabled selected value="hide">LAB02</option>
+                    <option value="1">
+                        <script>document.write(Days(0) + " - " + Days(5))</script>
+                    </option>
+                    <option value="2">
+                        <script>document.write(Days(7) + " - " + Days(12))</script>
+                    </option>
+                    <option value="3">
+                        <script>document.write(Days(14) + " - " + Days(19))</script>
+                    </option>
+                    <option value="4">
+                        <script>document.write(Days(21) + " - " + Days(26))</script>
+                    </option>
+                </select>
+                <br>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option disabled selected value="hide">LAB03</option>
+                    <option value="1">
+                        <script>document.write(Days(0) + " - " + Days(5))</script>
+                    </option>
+                    <option value="2">
+                        <script>document.write(Days(7) + " - " + Days(12))</script>
+                    </option>
+                    <option value="3">
+                        <script>document.write(Days(14) + " - " + Days(19))</script>
+                    </option>
+                    <option value="4">
+                        <script>document.write(Days(21) + " - " + Days(26))</script>
+                    </option>
+                </select>
+
+
+            </div>
+            <div class="col-sm-2 sidenav">
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <p></p>
+    </footer>
+
+</body>
+
+</html>

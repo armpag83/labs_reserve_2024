@@ -1,0 +1,33 @@
+body {
+  background-color: #bbe1ff !important;
+}
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #4cdbd5;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to left, rgba(76, 219, 213, 1), rgba(81, 174, 229, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to left, rgba(76, 219, 213, 1), rgba(81, 174, 229, 1))
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 100vh !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+  }
+}
+
+.btn-block {
+  --mdb-btn-margin-top: 0.5rem;
+  display: block;
+  width: 100%;
+}
