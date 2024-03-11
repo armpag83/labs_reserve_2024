@@ -19,6 +19,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `labsres`
 --
+CREATE DATABASE IF NOT EXISTS `labsres`;  
+
+USE `labsres`;
 
 -- --------------------------------------------------------
 
