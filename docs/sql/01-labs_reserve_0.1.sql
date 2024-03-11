@@ -19,8 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `labsres`
 --
-CREATE DATABASE IF NOT EXISTS `labsres`;  
-
+CREATE DATABASE IF NOT EXISTS `labsres` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `labsres`;
 
 -- --------------------------------------------------------
